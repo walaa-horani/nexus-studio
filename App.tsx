@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { Dashboard } from './components/Dashboard';
 import { ContentStudio } from './components/ContentStudio';
 import { ImageStudio } from './components/ImageStudio';
+import { Chatbot } from './components/Chatbot';
 import { AppView, GeneratedContent } from './types';
 
 const App: React.FC = () => {
@@ -22,6 +23,8 @@ const App: React.FC = () => {
         return <ContentStudio onGenerated={(content) => addHistoryItem(content)} />;
       case 'image-studio':
         return <ImageStudio onGenerated={(content) => addHistoryItem(content)} />;
+      case 'chatbot':
+        return <Chatbot />;
       case 'history':
         return (
           <div className="p-8">

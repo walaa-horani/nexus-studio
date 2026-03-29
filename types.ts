@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export type AppView = 'dashboard' | 'content-studio' | 'image-studio' | 'history' | 'settings';
+export type AppView = 'dashboard' | 'content-studio' | 'image-studio' | 'chatbot' | 'history' | 'settings';
 
 export interface StatItem {
   label: string;
