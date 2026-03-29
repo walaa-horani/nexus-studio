@@ -1,0 +1,8 @@
+{
+  "name": "Nexus AI Studio",
+  "description": "A high-performance, modular generative AI dashboard for content creation, image generation, and workflow management, powered by Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
