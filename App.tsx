@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const addHistoryItem = useCallback((item: GeneratedContent) => {
     setHistory(prev => [item, ...prev]);
   }, []);
-  ////////comment
+  //////comment
   const renderView = () => {
     switch (activeView) {
       case 'dashboard':
