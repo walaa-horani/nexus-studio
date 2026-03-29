@@ -51,7 +51,7 @@ export const ContentStudio: React.FC<ContentStudioProps> = ({ onGenerated }) => 
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="E.g. Write a 300-word blog post about the future of AI in web development..."
-              className="flex-1 bg-gray-950 border border-gray-800 rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/30 resize-none"
+              className="flex-1 bg-gray-950 border border-gray-800 rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-red-500/30 resize-none"
             />
             <div className="mt-6 flex items-center justify-between">
               <div className="flex space-x-2">
@@ -62,7 +62,7 @@ export const ContentStudio: React.FC<ContentStudioProps> = ({ onGenerated }) => 
               <button
                 onClick={handleGenerate}
                 disabled={isGenerating || !prompt}
-                className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white px-6 py-2 rounded-xl font-bold flex items-center space-x-2 transition-all shadow-lg shadow-blue-500/20"
+                className="bg-red-600 hover:bg-red-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white px-6 py-2 rounded-xl font-bold flex items-center space-x-2 transition-all shadow-lg shadow-red-500/20"
               >
                 {isGenerating ? (
                   <>
@@ -87,11 +87,11 @@ export const ContentStudio: React.FC<ContentStudioProps> = ({ onGenerated }) => 
         </div>
 
         <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 flex flex-col relative overflow-hidden group">
-          <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+          <div className="absolute inset-0 bg-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-white">Generated Content</h3>
             <button 
-              className="text-xs text-blue-400 hover:text-blue-300 font-medium transition-colors disabled:opacity-50"
+              className="text-xs text-red-400 hover:text-red-300 font-medium transition-colors disabled:opacity-50"
               disabled={!result}
               onClick={() => {
                 navigator.clipboard.writeText(result);

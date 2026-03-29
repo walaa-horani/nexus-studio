@@ -36,7 +36,7 @@ const App: React.FC = () => {
                       <h3 className="font-semibold">{item.title}</h3>
                       <p className="text-sm text-gray-400">{item.timestamp.toLocaleString()}</p>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${item.type === 'image' ? 'bg-purple-900/40 text-purple-300' : 'bg-blue-900/40 text-blue-300'}`}>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${item.type === 'image' ? 'bg-purple-900/40 text-purple-300' : 'bg-red-900/40 text-red-300'}`}>
                       {item.type}
                     </span>
                   </div>

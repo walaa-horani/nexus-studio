@@ -25,7 +25,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ history, onNavigate }) => 
         <div className="flex space-x-3">
           <button 
             onClick={() => onNavigate('content-studio')}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-blue-500/20"
+            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-red-500/20"
           >
             New Text Content
           </button>
@@ -60,7 +60,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ history, onNavigate }) => 
               {[40, 70, 45, 90, 65, 85, 100].map((h, i) => (
                 <div key={i} className="flex flex-col items-center group cursor-pointer">
                   <div 
-                    className="w-12 bg-blue-600/30 rounded-t-lg group-hover:bg-blue-600/60 transition-all" 
+                    className="w-12 bg-red-600/30 rounded-t-lg group-hover:bg-red-600/60 transition-all" 
                     style={{ height: `${h}%` }}
                   ></div>
                   <span className="text-[10px] text-gray-500 mt-2 font-medium uppercase">{['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i]}</span>
@@ -70,12 +70,12 @@ export const Dashboard: React.FC<DashboardProps> = ({ history, onNavigate }) => 
           </div>
           
           <div className="grid grid-cols-2 gap-6">
-             <div className="bg-blue-600/5 border border-blue-500/20 rounded-2xl p-6 relative overflow-hidden group cursor-pointer">
+             <div className="bg-red-600/5 border border-red-500/20 rounded-2xl p-6 relative overflow-hidden group cursor-pointer">
                 <div className="relative z-10">
-                    <h4 className="text-blue-400 font-bold text-xl mb-2">Write Blog Post</h4>
-                    <p className="text-blue-200/60 text-sm">Generate high-quality SEO optimized articles in seconds.</p>
+                    <h4 className="text-red-400 font-bold text-xl mb-2">Write Blog Post</h4>
+                    <p className="text-red-200/60 text-sm">Generate high-quality SEO optimized articles in seconds.</p>
                 </div>
-                <div className="absolute top-0 right-0 p-4 text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
+                <div className="absolute top-0 right-0 p-4 text-red-500/20 group-hover:text-red-500/40 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 2v4a2 2 0 002 2h4" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h5M7 12h8M7 16h8" /></svg>
                 </div>
              </div>
@@ -94,7 +94,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ history, onNavigate }) => 
         <div className="bg-gray-900/50 border border-gray-800 rounded-3xl p-6 flex flex-col">
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-lg font-semibold text-white">Recent Activity</h3>
-            <button className="text-sm text-blue-400 hover:text-blue-300 font-medium transition-colors" onClick={() => onNavigate('history')}>View all</button>
+            <button className="text-sm text-red-400 hover:text-red-300 font-medium transition-colors" onClick={() => onNavigate('history')}>View all</button>
           </div>
           <div className="flex-1 space-y-4 overflow-y-auto">
             {history.length === 0 ? (
@@ -105,11 +105,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ history, onNavigate }) => 
             ) : (
                 history.slice(0, 5).map((item) => (
                     <div key={item.id} className="flex items-center space-x-4 p-3 rounded-xl hover:bg-gray-800/50 transition-all border border-transparent hover:border-gray-700">
-                        <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${item.type === 'image' ? 'bg-purple-900/40' : 'bg-blue-900/40'}`}>
+                        <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${item.type === 'image' ? 'bg-purple-900/40' : 'bg-red-900/40'}`}>
                             {item.type === 'image' ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                             ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                             )}
                         </div>
                         <div className="flex-1 min-w-0">

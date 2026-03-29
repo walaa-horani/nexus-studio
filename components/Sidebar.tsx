@@ -40,12 +40,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, onNavigate }) => {
     <div className="w-64 bg-gray-900/50 border-r border-gray-800 flex flex-col backdrop-blur-md">
       <div className="p-6">
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
+          <div className="h-8 w-8 rounded-lg bg-red-600 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">Nexus AI</span>
+          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-rose-500">Nexus AI</span>
         </div>
       </div>
       
@@ -56,11 +56,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, onNavigate }) => {
             onClick={() => onNavigate(item.id)}
             className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
               activeView === item.id 
-                ? 'bg-blue-600/10 text-blue-400' 
+                ? 'bg-red-600/10 text-red-400' 
                 : 'text-gray-400 hover:bg-gray-800 hover:text-white'
             }`}
           >
-            <span className={activeView === item.id ? 'text-blue-400' : 'text-gray-500 group-hover:text-gray-300'}>
+            <span className={activeView === item.id ? 'text-red-400' : 'text-gray-500 group-hover:text-gray-300'}>
               {item.icon}
             </span>
             <span className="font-medium">{item.label}</span>
@@ -70,9 +70,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, onNavigate }) => {
 
       <div className="p-4 mt-auto">
         <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-4 border border-gray-700/50">
-          <p className="text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wider">Pro Plan</p>
+          <p className="text-xs font-semibold text-red-400 mb-1 uppercase tracking-wider">Pro Plan</p>
           <p className="text-sm text-gray-300 mb-3">Upgrade for more tokens and 4K generation.</p>
-          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-lg transition-colors font-medium">
+          <button className="w-full bg-red-600 hover:bg-red-700 text-white text-sm py-2 rounded-lg transition-colors font-medium">
             Upgrade Now
           </button>
         </div>
